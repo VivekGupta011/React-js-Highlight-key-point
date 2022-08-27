@@ -1,0 +1,3 @@
+>component are independent and reuseable bits of cods.
+>they are serve the same purpose as javascript functions,but they return HTML
+>Component come in the two type => 1.class components and 2.function components

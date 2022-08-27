@@ -1,0 +1,8 @@
+>JSX stands for javascript xml
+>JSX allows us to write HTML elements in javascript and place them in the DOM without any "createElement() and or appendChild()" methods. 
+
+
+syntax=>
+const myelement=<h1>I love jsx</h1>
+const root=ReactDom.createRoot(document.getElementById('root'));
+root.render(myelement);

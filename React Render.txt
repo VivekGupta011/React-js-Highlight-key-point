@@ -1,0 +1,4 @@
+>React's goal is in many ways to render HTML in web page
+>React renders HTML to the web page by using function  called 'ReactDom.render()'
+>the ReactDom.render() function takes two argument 1.HTML code and HTML element
+Note:first argument carry jsx code and second argument carry where we should render our code..
