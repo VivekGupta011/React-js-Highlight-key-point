@@ -1,0 +1,30 @@
+>props stands for properties
+>React Props are like function arguments in javascript and attributes in HTML.
+>To send props into a component use the same syntax as HTML attributes:
+>Props is special keyword in React which stands for properties and is being used for passing data from one component to another
+
+function car(props){
+    return <h2>hello I am here {props.fullname} </h2>
+}
+const root=ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <>
+    <car fullname="vivek gupta">
+    </>
+)
+
+Note:whenever we have pass object than visit this syntax
+
+function Objchild(props){
+    return <h1>This is {props.name.model}</h1>
+}
+
+export function Objeparent(){
+    const carInfo={name:"ford",model:"mastugo"}
+    return(
+        <>
+        <h1>this is ObjectParent</h1>
+        <objectchild name={carInfo};
+        </>
+    )
+}
