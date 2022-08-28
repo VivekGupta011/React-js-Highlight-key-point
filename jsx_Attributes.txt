@@ -1,0 +1,16 @@
+You may use quote to specify string literals as attributes.
+syntax:-
+const el=<h1 attributes="value"></h1>
+eq.
+const el=<h1 className="bg">Hello</h1>
+cosnt el=<label htmlFor="name">Name</label>
+
+Note:you can also use curly braces to embed a javascript expressionin an attribute.
+cosnt el=<h1 className={ac.tab}>Hello</h1>
+
+ReactDom.render(<App name="Rahul"/>,document.getElementById("root"));
+
+Note-
+1.since JSX is closer to javascript than to HTML,React DOM uses camelCase property naming convention
+instead of HTML attribute names.
+2.Don't put quotes around curly braces when embedding a javascript expression in a attribute.you should use either use quotes (for string values ) or curly braces(for expression ),but not both in the same attribute.

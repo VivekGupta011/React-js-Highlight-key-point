@@ -1,0 +1,6 @@
+Example:
+const el=<h1>Hello vivek<h1>
+const el=<h1 className="bg">Hello rahul</h1>
+const el=<h1>Hello {name}</h1>
+const el=<Student />
+const el=<student name="Rahul" />

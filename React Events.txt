@@ -1,0 +1,14 @@
+>React has the same events as HTML :click,change,mouseover etc
+>React events are written in camelCase syntax:
+e.q.=>onClick instead of onClick
+
+
+>React events handlers are written inside curly braces:
+e.q.=>onClick={shoot} instead of onClick="shoot()".
+React:
+<button onClick={shoot}>Take the shot!</button>
+HTML:
+<button onclick="shoot()">Take the shot!</button>
+
+
+>whenever pass "function argument" in event you have to use arrow function.
