@@ -1,0 +1,3 @@
+>In React, a stateful component is a component that holds some state.
+>In React, a stateless component is a component that holds no state.
+Note :but both types of components can use props

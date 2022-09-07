@@ -1,0 +1,5 @@
+>What is useState?
+=>useState hook is a function to add State in Functional component.
+
+>What is State?
+=>State is nothing but just values or variable of your component

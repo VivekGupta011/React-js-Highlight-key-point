@@ -1,0 +1,23 @@
+>the useEffect hook allows you to perform side effects in your components.
+e.q.fetching data,directly updating the DOM and timers
+>useEffect accepts two arguments. the second argument is optional
+useEffect(<function>,<dependency>)
+
+Note:useEffect runs on every second
+>To control over them we have some syntax:
+
+1.No dependency passed:
+useEffect(()=>{
+    //Runs on every render
+})
+
+2.Anempty array
+useEffect (()=>{
+    //Runs only on the first render
+},[]);
+
+3.Props or state values:
+useEffect(()=>{
+    //Runs on the first render
+    //ANd any time any dependency values changes
+},[prop,state]);

@@ -1,0 +1,11 @@
+>Hooks are the function to use some React features in functional component.
+Note:In other words,Hooks are functions that make function component work like class component
+
+
+>Hooks were added to React in version 16.8.
+>Rule:
+1.hooks can only be called inside React function component
+2.hooks can only be called at the top level of a component 
+3.hooks cannot be Condtionally
+
+Note:hooks will not work in React class component
