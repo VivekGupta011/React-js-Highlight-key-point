@@ -1,0 +1,7 @@
+>useLayoutEffect works exactly the same as useEffect(Also same syntax).
+>useEffect runs after the DOM is printed on the browser.(run Asynchronously)
+>useLayoutEffect runs Before the DOM is printed on the browser.(run synchronously)
+>whenever we have to need measure about-
+1.Height
+2.Width
+3.Anything related to layout  

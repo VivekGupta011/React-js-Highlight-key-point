@@ -1,0 +1,5 @@
+>useContext:it is used to manage global data in react application.
+>How to create useContext?
+1.Creating the Context
+2.Providing the Context
+3.Consuming the Context
