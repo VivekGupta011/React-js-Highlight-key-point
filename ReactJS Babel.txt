@@ -1,0 +1,7 @@
+>Babel is very famous 'transpiler' that allows us to use future JavaScript in today's browser.
+>In simple words,It can convert the latest version of JavaScript code into the one that browser understands.
+>What is transpiler?
+=>it is a tool that is used to convert source code into another source code into that of the same level.
+
+>Why do we need Babel? 
+=>The main reason we need babel is that it gives us the privilege to make use of the latest things JavaScript has to offer without worrying about whether it will work in the browser or not. 
