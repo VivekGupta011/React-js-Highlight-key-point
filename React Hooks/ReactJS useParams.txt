@@ -1,0 +1,2 @@
+>in our project we need to access the parameter of the current route in this case useParams hook comes into application.
+>useParams hooks that let you access the parameter of the current route.
