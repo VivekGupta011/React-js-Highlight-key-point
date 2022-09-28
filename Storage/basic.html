@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    let sorageData=localStorage;
+    console.log(sorageData);
+    localStorage.setItem("theme","light");
+    localStorage.setItem("font",'bold');
+    localStorage.removeItem('theme');
+
+    let data={
+        name:"vivek",
+        last:"gupta",
+        fullname:"vivek gupta"
+    }
+    let dataobject= JSON.stringify(data);
+    console.log(typeof dataobject)
+    localStorage.setItem("objectData",dataobject)
+    const getdata=JSON.parse(localStorage.getItem("objectData"));
+
+    // const uSetting=JSON.parse(getdata);
+
+    console.log(getdata.last);
+
+
+
+
+</script>
+
+</html>
