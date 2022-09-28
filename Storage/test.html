@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="testing">
+        <button id="btncustom" onclick="testfunct()">click me</button>
+        <button id="btncustom1">click me for addEventListener</button>
+        <div id="testing2">
+
+        </div>
+
+    </div>
+
+    <script>
+        function testfunct(){
+        const address=document.getElementById("testing");
+        const data=document.createElement("h1").innerHTML="hello vivek";
+        const data1=document.createElement("h6").innerHTML="hello vivek thisi sh6";
+        address.append(data,data1);
+       }
+     
+
+       function testfunct2(){
+        const address1=document.getElementById("testing2");
+        const datafunct=document.createElement("h1");
+        const datatest=document.createTextNode("hello vivek this is come from the addeentlistner!");
+        datafunct.appendChild(datatest);
+        address1.appendChild(datafunct);
+
+
+       }
+    //    const btndata=document.getElementById("btncustom1");
+       document.getElementById("btncustom1").addEventListener("click",testfunct2);
+
+
+    </script>
+    
+</body>
+</html>

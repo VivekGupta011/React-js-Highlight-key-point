@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="">
+        <select name="" id="theme">
+            <option value="default">Select a theme</option>
+            <option id="dark" value="light">light</option>
+            <option id="light" value="dark">Dark</option>
+        </select>
+    </form>
+
+    <script>
+        let themedata= document.getElementById("theme");
+        
+        console.log("this is data",themedata)
+        themedata.addEventListener('change',(e)=>{
+            changeItem(e.target.value);
+            console.log("this is event data",e.target.value);
+
+
+        });
+
+        function changeItem(themeType){
+        if(themeType==='light'){
+            document.body.style.backgroundColor='white';
+        }else if(themeType==='dark'){
+            document.body.style.backgroundColor='black';
+        }
+        else{
+            document.body.style.backgroundColor='green';
+
+        }
+
+        }
+        window.addEventListener('storage',(event)=>{
+            console.log("this is event target", event);  
+
+        });
+
+          
+    </script>
+</body>
+</html>

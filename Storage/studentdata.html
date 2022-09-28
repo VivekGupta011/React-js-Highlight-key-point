@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+    <input type="text" name="" id="txt1">
+    <input type="text" name="" id="txt2">
+    <input type="text" name="" id="txt3">
+    <input type="button" value="click here" id="testingbtn">
+    </form>
+    <script>
+        
+        let formdata1=document.getElementById("txt1").value;
+        let formdata2=document.getElementById("txt2").value;
+        let formdata3=document.getElementById("txt3").value;
+        function Testbutton(){
+            formdata1=document.getElementById("txt1").value;
+            formdata2=document.getElementById("txt2").value;
+            formdata3=document.getElementById("txt3").value;
+
+            let studentData=[{
+                name:"vivek",
+                lastname:"gupta",
+                fullname:"vivek gupta"
+
+            }];
+            
+            console.log("formdata1:"+formdata1)
+            console.log("formdata2:"+formdata2)
+            console.log("formdata3:"+formdata3)
+        
+        Testingfunc(formdata1,formdata2,formdata3);
+        function Testingfunc(a,b,c){
+            const divcontainer=document.createElement("div");
+            const textelement1=document.createElement("p");
+            const textelement2=document.createElement("p");
+            const textelement3=document.createElement("p");
+            textelement1.innerHTML="Name is:"+a;
+            textelement2.innerHTML="Name is:"+b;
+            textelement3.innerHTML="Name is:"+c;
+            divcontainer.append(textelement1,textelement2,textelement3);
+            document.body.append(divcontainer);
+
+
+        }
+        // studentData.forEach(Testingfunc);
+        
+        }
+        document.getElementById("testingbtn").addEventListener("click",Testbutton);
+    </script>
+</body>
+</html>
