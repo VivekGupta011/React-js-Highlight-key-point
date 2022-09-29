@@ -7,51 +7,66 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
+    <form action="" id="formdatasub">
     <input type="text" name="" id="txt1">
     <input type="text" name="" id="txt2">
     <input type="text" name="" id="txt3">
-    <input type="button" value="click here" id="testingbtn">
+    <input type="button" value="click here" id="testingbtn" onclick="myfunction()">
+    <!-- <input type="button" value="click here" id="testingbtn1" onclick="Accessdata()"> -->
     </form>
     <script>
         
+       
+        
+        const students=JSON.parse(localStorage.getItem("students")) || [];
+        console.log("thsi si localstorage data",students);
+        const addstudents=(name,age,roll)=>{
+            students.push({
+                name,age,roll
+            });
+            console.log("this is students",typeof students)
+            localStorage.setItem("students",JSON.stringify(students))
+            console.log("this is students after stringify",typeof students)
+          
+            return {name,age,roll};
+
+        }
+
+
+        // accessing data from array
+        function Accessdata({name,age,roll}){
+            let nameh1=document.createElement("p").innerHTML="your name is:"+name;
+            let ageh1=document.createElement("p").innerText="your agde is:"+age;
+            let rollh1=document.createElement("p").innerText="your rodfdll is:"+roll;
+            document.body.append(nameh1,ageh1,rollh1);
+        }
+
+        const myfunction=()=>{
         let formdata1=document.getElementById("txt1").value;
         let formdata2=document.getElementById("txt2").value;
         let formdata3=document.getElementById("txt3").value;
-        function Testbutton(){
-            formdata1=document.getElementById("txt1").value;
-            formdata2=document.getElementById("txt2").value;
-            formdata3=document.getElementById("txt3").value;
+        let btn=document.getElementById("testingbtn");
 
-            let studentData=[{
-                name:"vivek",
-                lastname:"gupta",
-                fullname:"vivek gupta"
 
-            }];
+            // e.preventDefault();
+            const newarraydata=addstudents(formdata1,formdata2,formdata3);
+            console.log("this is newarraydata:",newarraydata);
+            console.log("this is newarraydata"+addstudents);
+            Accessdata(students);
+            console.log('this studenst',students);
+            setTimeout(()=>{
+            document.getElementById("txt1").value="";
+            document.getElementById("txt2").value="";
+            document.getElementById("txt3").value="";
+            },5000)
+        //  document.getElementById("testingbtn");
             
-            console.log("formdata1:"+formdata1)
-            console.log("formdata2:"+formdata2)
-            console.log("formdata3:"+formdata3)
-        
-        Testingfunc(formdata1,formdata2,formdata3);
-        function Testingfunc(a,b,c){
-            const divcontainer=document.createElement("div");
-            const textelement1=document.createElement("p");
-            const textelement2=document.createElement("p");
-            const textelement3=document.createElement("p");
-            textelement1.innerHTML="Name is:"+a;
-            textelement2.innerHTML="Name is:"+b;
-            textelement3.innerHTML="Name is:"+c;
-            divcontainer.append(textelement1,textelement2,textelement3);
-            document.body.append(divcontainer);
+        }
 
 
-        }
-        // studentData.forEach(Testingfunc);
         
-        }
-        document.getElementById("testingbtn").addEventListener("click",Testbutton);
+        
+    
     </script>
 </body>
 </html>
